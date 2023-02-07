@@ -9,6 +9,8 @@ public class PlayerController : MonoBehaviour
     private Animator playerAnim; 
     public ParticleSystem explosionParticle;
     public ParticleSystem dirtParticle;
+    public AudioClip jumpSound;
+    public AudioClip crashSound; 
     public float jumpForce;
     public float gravityModifier;
     public bool isOnGround = true; 
