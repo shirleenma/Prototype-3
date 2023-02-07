@@ -7,10 +7,12 @@ public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
     private Animator playerAnim; 
+    public ParticleSystem explosionParticle;
     public float jumpForce;
     public float gravityModifier;
     public bool isOnGround = true; 
     public bool gameOver = false;
+    
     
 
     // Start is called before the first frame update
@@ -44,7 +46,8 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Game Over!");
             gameOver = true;
             playerAnim.SetBool("Death_b", true);
-            playerAnim.SetInteger("DeathType_int", 1); 
+            playerAnim.SetInteger("DeathType_int", 1);
+            explosionParticle.Play(); 
         }
     }
 }
